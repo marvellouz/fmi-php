@@ -1,3 +1,22 @@
+<?php /* Smarty version Smarty-3.0.7, created on 2011-04-26 22:34:32
+         compiled from "templates_c/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:6768186114db72c58ef08c6-56798241%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '134698f94fc70d4dc67bb071fd3c80b5e24d4616' => 
+    array (
+      0 => 'templates_c/index.tpl',
+      1 => 1303850071,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '6768186114db72c58ef08c6-56798241',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="bg" lang="bg">
@@ -28,25 +47,39 @@
       <div id = "header">
         <ul id = "hmenu">
         <li><a href = "/xampp/fmi-php/HW4/">All</a></li>
-	{foreach from=$categories item=category}
-          <li><a href = "/xampp/fmi-php/HW4/categories/index.php?id={$category['ID']}">{$category["Name"]}</a></li>
-	{/foreach}
+	<?php  $_smarty_tpl->tpl_vars['category'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('categories')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['category']->key => $_smarty_tpl->tpl_vars['category']->value){
+?>
+          <li><a href = "/xampp/fmi-php/HW4/categories/index.php?id=<?php echo $_smarty_tpl->tpl_vars['category']->value['ID'];?>
+"><?php echo $_smarty_tpl->tpl_vars['category']->value["Name"];?>
+</a></li>
+	<?php }} ?>
         </ul>
         <ul id = "hmenu2">
         </ul>
       </div>
       <div id = "content">
-        {block name=content}
+        
         <div id = "images">
-	{foreach from=$wishes item=wish}
-          <div class = "image"><a href = "/xampp/fmi-php/HW4/" ><img src = "{$wish['Image']}" alt = "{$wish['ID']}"/></a>
-            <div class = "description"><h1>{$wish["Name"]}</h1><p>{$wish["Description"]} </p> 
+	<?php  $_smarty_tpl->tpl_vars['wish'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('wishes')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['wish']->key => $_smarty_tpl->tpl_vars['wish']->value){
+?>
+          <div class = "image"><a href = "/xampp/fmi-php/HW4/" ><img src = "<?php echo $_smarty_tpl->tpl_vars['wish']->value['Image'];?>
+" alt = "<?php echo $_smarty_tpl->tpl_vars['wish']->value['ID'];?>
+"/></a>
+            <div class = "description"><h1><?php echo $_smarty_tpl->tpl_vars['wish']->value["Name"];?>
+</h1><p><?php echo $_smarty_tpl->tpl_vars['wish']->value["Description"];?>
+ </p> 
             </div>
           </div>
-	{/foreach}
+	<?php }} ?>
 
         </div>
-        {/block} 
+         
         <div id = "footer">Валентина Динкова</div>
       </div>
     </div>

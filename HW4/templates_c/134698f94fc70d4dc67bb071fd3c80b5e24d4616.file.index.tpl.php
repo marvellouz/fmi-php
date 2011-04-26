@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-26 21:06:10
+<?php /* Smarty version Smarty-3.0.7, created on 2011-04-26 22:48:05
          compiled from "templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11173756654db717a24ff777-94654651%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7883656974db72f85455503-04326861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '134698f94fc70d4dc67bb071fd3c80b5e24d4616' => 
     array (
       0 => 'templates_c/index.tpl',
-      1 => 1303844762,
+      1 => 1303850881,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11173756654db717a24ff777-94654651',
+  'nocache_hash' => '7883656974db72f85455503-04326861',
   'function' => 
   array (
   ),
@@ -46,6 +46,7 @@ $_smarty_tpl->decodeProperties(array (
     <div id = "main">
       <div id = "header">
         <ul id = "hmenu">
+        <li><a href = "/xampp/fmi-php/HW4/">All</a></li>
 	<?php  $_smarty_tpl->tpl_vars['category'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('categories')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
