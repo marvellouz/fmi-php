@@ -28,7 +28,7 @@
       <div id = "header">
         <ul id = "hmenu">
 	{foreach from=$categories item=category}
-          <li><a href = "/xampp/fmi-fmi-php/HW4/categories/category.php?id={$category['ID']}">{$category["Name"]}</a></li>
+          <li><a href = "/xampp/fmi-php/HW4/categories/index.php?id={$category['ID']}">{$category["Name"]}</a></li>
 	{/foreach}
         </ul>
         <ul id = "hmenu2">
