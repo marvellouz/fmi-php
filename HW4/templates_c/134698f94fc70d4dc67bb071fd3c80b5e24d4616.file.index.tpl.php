@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-21 09:31:38
+<?php /* Smarty version Smarty-3.0.7, created on 2011-04-26 20:01:24
          compiled from "templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14038867484dafdd5a1ca6e9-70856597%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20640612974db70874399b96-36200185%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '134698f94fc70d4dc67bb071fd3c80b5e24d4616' => 
     array (
       0 => 'templates_c/index.tpl',
-      1 => 1303335233,
+      1 => 1303840880,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14038867484dafdd5a1ca6e9-70856597',
+  'nocache_hash' => '20640612974db70874399b96-36200185',
   'function' => 
   array (
   ),
@@ -38,19 +38,23 @@ $_smarty_tpl->decodeProperties(array (
   <body>
     <div id = "menu">
       <map id = "coffee" name="menu">
-        <area alt = "контакти" shape="poly" title="контакти" href="/xampp/fmi-php/HW4/contacts/" coords="104,303,106,302,114,302,117,301,121,300,127,300,129,299,132,299,134,298,137,298,140,297,146,297,152,295,154,294,157,293,160,293,162,292,209,292,212,293,214,295,214,298,215,301,215,311,214,314,212,316,210,317,207,317,205,318,201,318,198,319,194,319,190,320,179,320,176,321,172,321,169,322,166,322,164,323,152,323,150,324,146,325,126,325,124,326,120,326,114,328,111,328,109,329,106,329,104,330,101,331,88,331,86,330,84,326,84,308,85,306,89,302,91,301,109,301,113,302" />
-        <area alt = "за мен" shape="poly" title="за мен" href="/xampp/fmi-php/HW4/" coords="84,269,87,268,90,268,92,267,98,267,102,265,105,265,107,264,110,264,114,263,120,263,128,261,143,256,153,256,156,255,159,255,165,253,169,252,172,252,176,251,182,251,185,252,187,253,187,256,188,258,188,267,186,269,184,270,182,272,180,273,177,273,175,274,171,275,169,276,166,277,163,277,159,279,156,280,152,282,144,284,140,286,137,287,131,287,129,288,122,288,120,289,83,289,79,285,79,276,80,274,82,272,83,270,87,268,102,268" />
-        <area alt = "начало" shape="poly" title="начало" href="/xampp/fmi-php/HW4/" coords="78,223,96,223,98,222,101,221,103,220,106,220,108,219,114,219,118,217,124,217,127,216,136,216,138,215,141,214,144,214,147,213,150,213,152,212,155,211,170,211,176,217,176,223,175,225,173,227,170,229,168,230,165,231,162,231,160,232,154,232,152,233,149,233,146,234,143,234,139,236,130,239,127,239,124,240,105,240,103,241,97,241,95,242,86,242,83,241,79,239,77,237,76,235,76,232,80,224,82,222" />
+        <area alt = "начало" shape="poly" title="начало" href="/xampp/fmi-php/HW4/" coords="84,269,87,268,90,268,92,267,98,267,102,265,105,265,107,264,110,264,114,263,120,263,128,261,143,256,153,256,156,255,159,255,165,253,169,252,172,252,176,251,182,251,185,252,187,253,187,256,188,258,188,267,186,269,184,270,182,272,180,273,177,273,175,274,171,275,169,276,166,277,163,277,159,279,156,280,152,282,144,284,140,286,137,287,131,287,129,288,122,288,120,289,83,289,79,285,79,276,80,274,82,272,83,270,87,268,102,268" />
       </map>
-      <img id = "menu_cup" usemap = "#menu" src="/xampp/fmi-php/HW4/site_media/images/menu.png" alt = "меню"/>
+      <img id = "menu_cup" usemap = "#menu" src="/xampp/fmi-php/HW4/site_media/images/menu1.png" alt = "меню"/>
       <div id = "mouse"></div>
     </div>
     <div id = "main">
       <div id = "header">
         <ul id = "hmenu">
-          <li><a href = "http://github.com/marvellouz" rel = "external">код</a></li>
-          <li><a href = "http://www.flickr.com/photos/vdinkova/" rel = "external">снимки</a></li>
-          <li><a href = "http://www.last.fm/user/marvellouz" rel = "external" >музика</a></li>
+	<?php  $_smarty_tpl->tpl_vars['category'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('categories')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['category']->key => $_smarty_tpl->tpl_vars['category']->value){
+?>
+          <li><a href = "/xampp/fmi-fmi-php/HW4/categories/category.php?id=<?php echo $_smarty_tpl->tpl_vars['category']->value['ID'];?>
+"><?php echo $_smarty_tpl->tpl_vars['category']->value["Name"];?>
+</a></li>
+	<?php }} ?>
         </ul>
         <ul id = "hmenu2">
         </ul>
@@ -58,10 +62,20 @@ $_smarty_tpl->decodeProperties(array (
       <div id = "content">
         
         <div id = "images">
-          <div class = "image"><a href = "/xampp/fmi-php/HW4/" ><img src = "/xampp/fmi-php/HW4/site_media/images/wishlist/ramHT1_small.png" alt = "talants2"/></a>
-            <div class = "description"><h1>ram HT1</h1><p>Description here.</p> 
+	<?php  $_smarty_tpl->tpl_vars['wish'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('wishes')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['wish']->key => $_smarty_tpl->tpl_vars['wish']->value){
+?>
+          <div class = "image"><a href = "/xampp/fmi-php/HW4/" ><img src = "<?php echo $_smarty_tpl->tpl_vars['wish']->value['Image'];?>
+" alt = "<?php echo $_smarty_tpl->tpl_vars['wish']->value['ID'];?>
+"/></a>
+            <div class = "description"><h1><?php echo $_smarty_tpl->tpl_vars['wish']->value["Name"];?>
+</h1><p><?php echo $_smarty_tpl->tpl_vars['wish']->value["Description"];?>
+ </p> 
             </div>
           </div>
+	<?php }} ?>
 
         </div>
          
