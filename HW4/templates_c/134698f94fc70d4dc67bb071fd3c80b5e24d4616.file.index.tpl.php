@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-26 23:36:57
+<?php /* Smarty version Smarty-3.0.7, created on 2011-04-27 15:19:06
          compiled from "templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14307353374db73af927f344-84850894%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:21290990684db817ca4e0637-59936746%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '134698f94fc70d4dc67bb071fd3c80b5e24d4616' => 
     array (
       0 => 'templates_c/index.tpl',
-      1 => 1303853805,
+      1 => 1303910341,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14307353374db73af927f344-84850894',
+  'nocache_hash' => '21290990684db817ca4e0637-59936746',
   'function' => 
   array (
   ),
@@ -52,7 +52,7 @@ $_smarty_tpl->decodeProperties(array (
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['category']->key => $_smarty_tpl->tpl_vars['category']->value){
 ?>
-          <li><a href = "/xampp/fmi-php/HW4/categories/index.php?id=<?php echo $_smarty_tpl->tpl_vars['category']->value['ID'];?>
+          <li><a href = "/xampp/fmi-php/HW4/categories/?id=<?php echo $_smarty_tpl->tpl_vars['category']->value['ID'];?>
 "><?php echo $_smarty_tpl->tpl_vars['category']->value["Name"];?>
 </a></li>
 	<?php }} ?>

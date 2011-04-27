@@ -7,7 +7,6 @@ require_once("./helpers.php");
 $wishes_results = $mysqli->query("select * from Wish order by Priority");
 $wishes = table_content($wishes_results);
 
-
 $smarty = new Smarty;
 
 $smarty->assign('wishes', $wishes);
