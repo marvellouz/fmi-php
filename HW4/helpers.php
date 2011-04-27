@@ -5,7 +5,6 @@ $mysqli=new mysqli($host, $user, $password, $schema);
 
 /*
  * This is the "official" OO way to do it,
- x
  * BUT $connect_error was broken until PHP 5.2.9 and 5.3.0.
  */
 if ($mysqli->connect_error) {
@@ -21,9 +20,6 @@ if (mysqli_connect_error()) {
   die('Connect Error (' . mysqli_connect_errno() . ') '
     . mysqli_connect_error());
 }
-
-
-
 
 function table_content($res) {
     $result = array();
