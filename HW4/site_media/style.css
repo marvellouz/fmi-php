@@ -106,8 +106,14 @@ img {
   background-repeat: repeat-y;
   min-height: 300px;
 }
+
 /* IE-6 fixes */
 * html .container{ height: 300px; }
+
+.container form {
+  margin-left: 230px;
+  padding-top: 50px;
+}
 
 #contacts, #about {
   margin: 0;

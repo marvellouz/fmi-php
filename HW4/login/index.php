@@ -30,7 +30,6 @@ function login() {
       $_SESSION['flash'] = "Успешно влязохте като ".$_SESSION['email']."!";
       exit;
     }
-
     $_SESSION['flash'] = "Грешно потребителско име или парола!";
   }
 }
@@ -38,11 +37,10 @@ function login() {
 
 $smarty = new Smarty;
 
-$smarty->assign('wishes', $wishes);
 $smarty->assign('categories', $categories);
 
 // display it
-$smarty->display('templates_c/index.tpl');
+$smarty->display('../templates_c/login.tpl');
 
 $mysqli->close();
 ?>
