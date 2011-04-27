@@ -1,8 +1,28 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
+
 DROP SCHEMA IF EXISTS `mydb` ;
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET UTF8 COLLATE utf8_general_ci;
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 USE `mydb` ;
 
+-- -----------------------------------------------------
+-- Table `mydb`.`User`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`User` ;
 
+CREATE  TABLE IF NOT EXISTS `mydb`.`User` (
+  `ID` INT NOT NULL AUTO_INCREMENT ,
+  `FirstName` VARCHAR(45) NOT NULL ,
+  `LastName` VARCHAR(45) NOT NULL ,
+  `E-mail` VARCHAR(45) NOT NULL ,
+  `password` VARCHAR(255) NOT NULL ,
+  `IsAdmin` TINYINT(1)  NULL ,
+  PRIMARY KEY (`ID`) ,
+  UNIQUE INDEX `E-mail_UNIQUE` (`E-mail` ASC) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -16,8 +36,17 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`Wish` (
   `Description` VARCHAR(255) NULL ,
   `Priority` INT NOT NULL ,
   `Image` VARCHAR(255) NULL ,
-  PRIMARY KEY (`ID`) )
-ENGINE = InnoDB;
+  `User_ID` INT NULL ,
+  PRIMARY KEY (`ID`) ,
+  INDEX `fk_Wish_User1` (`User_ID` ASC) ,
+  CONSTRAINT `fk_Wish_User1`
+    FOREIGN KEY (`User_ID` )
+    REFERENCES `mydb`.`User` (`ID` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -31,7 +60,9 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`Category` (
   `Description` VARCHAR(255) NULL ,
   `Image` VARCHAR(255) NULL ,
   PRIMARY KEY (`ID`) )
-ENGINE = InnoDB;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -55,4 +86,12 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`Wish_has_Category` (
     REFERENCES `mydb`.`Category` (`ID` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
