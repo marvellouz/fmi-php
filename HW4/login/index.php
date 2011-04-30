@@ -7,10 +7,10 @@ require_once("../settings.php");
 require_once("../helpers.php"); 
 
 function check_login($email, $password) {
-  $user_results = $mysqli->query("select * from User where E-mail='$email' and Password='MD5($password)' limit 1");
+  $user_results = "select * from User where Email='$email' and Password='$password' limit 1";
   $user = table_content($user_results);
-  if ($user->num_rows == 0) return false;
-  return $user[0];
+  if (count($user) == 0) return false;
+  return $user;
 }
 
 function logout() {
@@ -20,24 +20,26 @@ function logout() {
 
 function login() {
   if(isset ($_POST['login'])) {
-    $user = check_login(db_escape($_POST['email']), db_escape($_POST['password']));
+    $user = check_login(mysql_real_escape_string($_POST['email']), mysql_real_escape_string($_POST['password']));
     if($user) {
       $_SESSION['uid'] = $user['id'];
       $_SESSION['email'] = $_POST['email'];
       $_SESSION['FirstName'] = $user['FirstName'];
       $_SESSION['LastName'] = $user['LastName'];
-      header("Location: index.php");
       $_SESSION['flash'] = "Успешно влязохте като ".$_SESSION['email']."!";
+      header("Location: ../index.php");
       exit;
     }
     $_SESSION['flash'] = "Грешно потребителско име или парола!";
   }
 }
 
+login();
 
 $smarty = new Smarty;
 
 $smarty->assign('categories', $categories);
+
 
 // display it
 $smarty->display('../templates_c/login.tpl');

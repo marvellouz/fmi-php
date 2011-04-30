@@ -131,3 +131,9 @@ img {
   color: #F6C285;
   font: 16px Georgia, sans-serif;
 }
+
+#flash {
+  margin-left: 50px;
+  color: #531F24;
+  font: italic 16px Georgia, sans-serif;
+}

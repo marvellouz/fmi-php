@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-27 15:43:57
+<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 10:52:54
          compiled from "../templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10281179964db81d9d6b2156-26714003%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:17053324424dbbcde65bb152-54848706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '660999d210f74d28ee46d5b2195450c1dd93e26b' => 
     array (
       0 => '../templates_c/index.tpl',
-      1 => 1303911790,
+      1 => 1304153432,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10281179964db81d9d6b2156-26714003',
+  'nocache_hash' => '17053324424dbbcde65bb152-54848706',
   'function' => 
   array (
   ),
@@ -59,9 +59,16 @@ if ($_smarty_tpl->_count($_from) > 0){
         </ul>
         <ul id = "hmenu2">
         </ul>
+      
+	<?php if ($_smarty_tpl->getVariable('flash')->value){?>
+	<div id="flash">
+	  <?php echo $_smarty_tpl->getVariable('flash')->value;?>
+
+	</div>
+	<?php }?>
       </div>
       <div id = "content">
-        
+
         <div id = "images">
 	<?php  $_smarty_tpl->tpl_vars['wish'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('wishes')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}

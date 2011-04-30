@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-28 00:14:32
+<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 10:50:35
          compiled from "../templates_c/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19506570004db89548d1ab18-12223440%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:10164495584dbb02f35cc555-71998380%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9e24eb37fd1f9e4b418a72cd29b97a2537cff631' => 
     array (
       0 => '../templates_c/login.tpl',
-      1 => 1303942469,
+      1 => 1304101492,
       2 => 'file',
     ),
     '660999d210f74d28ee46d5b2195450c1dd93e26b' => 
     array (
       0 => '../templates_c/index.tpl',
-      1 => 1303911790,
+      1 => 1304153432,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19506570004db89548d1ab18-12223440',
+  'nocache_hash' => '10164495584dbb02f35cc555-71998380',
   'function' => 
   array (
   ),
@@ -65,12 +65,10 @@ if ($_smarty_tpl->_count($_from) > 0){
         </ul>
         <ul id = "hmenu2">
         </ul>
-      </div>
-      <div id = "content">
-        
+      
 
 <div class = "container">
-<form method="post" action="index.php">
+<form method="post" action="../login/">
 <label for="email">E-mail: </label><br/>
 <input type="text" id="email" name="email"/>
 <br/>

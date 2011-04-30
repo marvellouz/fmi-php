@@ -15,11 +15,11 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`User` (
   `ID` INT NOT NULL AUTO_INCREMENT ,
   `FirstName` VARCHAR(45) NOT NULL ,
   `LastName` VARCHAR(45) NOT NULL ,
-  `E-mail` VARCHAR(45) NOT NULL ,
-  `password` VARCHAR(255) NOT NULL ,
+  `Email` VARCHAR(45) NOT NULL ,
+  `Password` VARCHAR(255) NOT NULL ,
   `IsAdmin` TINYINT(1)  NULL ,
   PRIMARY KEY (`ID`) ,
-  UNIQUE INDEX `E-mail_UNIQUE` (`E-mail` ASC) )
+  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;

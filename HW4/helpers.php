@@ -1,7 +1,8 @@
 <?php
 
-
 $mysqli=new mysqli($host, $user, $password, $schema);
+
+$mysqli->set_charset("utf8");
 
 /*
  * This is the "official" OO way to do it,
@@ -21,15 +22,22 @@ if (mysqli_connect_error()) {
     . mysqli_connect_error());
 }
 
-function table_content($res) {
-    $result = array();
-      while ($row = $res->fetch_assoc()) {
-	    array_push($result, $row);
-	      }
-      return $result;
+function table_content($query_string) {
+  global $mysqli;
+  $query_result = $mysqli->query($query_string);
+  $result = array();
+  while ($row = $query_result->fetch_assoc()) {
+    array_push($result, $row);
+  }
+  return $result;
 }
 
-$categories_results = $mysqli->query("select * from Category"); 
+$categories_results = "select * from Category"; 
 $categories = table_content($categories_results); 
+
+$smarty = new Smarty;
+$smarty->assign('flash', $_SESSION['flash']);
+$_SESSION['flash']="";
+$smarty->assign('categories', $categories);
 
 ?>

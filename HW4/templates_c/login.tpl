@@ -2,7 +2,7 @@
 {block name=content}
 
 <div class = "container">
-<form method="post" action="index.php">
+<form method="post" action="../login/">
 <label for="email">E-mail: </label><br/>
 <input type="text" id="email" name="email"/>
 <br/>
