@@ -54,7 +54,7 @@ body {
 #hmenu2 li a {
   color: #531F24;
 }
-#hello {
+#hello, #login {
   font: bold 16px Georgia, sans-serif;
   color: #531F24;
 }

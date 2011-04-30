@@ -1,17 +1,23 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 19:40:00
-         compiled from "templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4100982564dbc4970a70366-84198233%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 19:39:53
+         compiled from "../templates_c/register.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:4842586034dbc3d05be1730-44633151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '134698f94fc70d4dc67bb071fd3c80b5e24d4616' => 
+    'ba2fef0b889e5706e92fdffdd91c8ddc4ecfc559' => 
     array (
-      0 => 'templates_c/index.tpl',
+      0 => '../templates_c/register.tpl',
+      1 => 1304181809,
+      2 => 'file',
+    ),
+    '660999d210f74d28ee46d5b2195450c1dd93e26b' => 
+    array (
+      0 => '../templates_c/index.tpl',
       1 => 1304185063,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4100982564dbc4970a70366-84198233',
+  'nocache_hash' => '4842586034dbc3d05be1730-44633151',
   'function' => 
   array (
   ),
@@ -76,24 +82,32 @@ if ($_smarty_tpl->_count($_from) > 0){
       <div id = "content">
 
       
-        <div id = "images">
-	<?php  $_smarty_tpl->tpl_vars['wish'] = new Smarty_Variable;
- $_from = $_smarty_tpl->getVariable('wishes')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-if ($_smarty_tpl->_count($_from) > 0){
-    foreach ($_from as $_smarty_tpl->tpl_vars['wish']->key => $_smarty_tpl->tpl_vars['wish']->value){
-?>
-          <div class = "image"><a href = "/xampp/fmi-php/HW4/" ><img src = "<?php echo $_smarty_tpl->tpl_vars['wish']->value['Image'];?>
-" alt = "<?php echo $_smarty_tpl->tpl_vars['wish']->value['ID'];?>
-"/></a>
-            <div class = "description"><h1><?php echo $_smarty_tpl->tpl_vars['wish']->value["Name"];?>
-</h1><p><?php echo $_smarty_tpl->tpl_vars['wish']->value["Description"];?>
- </p> 
-            </div>
-          </div>
-	<?php }} ?>
 
-        </div>
-         
+<div class = "container">
+<form method="post" action="../register/">
+
+<label for="FirstName">Име: </label><br/>
+<input type="text" id="FirstName" name="FirstName"/>
+<br/>
+
+<label for="LastName">Фамилия: </label><br/>
+<input type="text" id="LastName" name="LastName"/>
+<br/>
+
+<label for="email">E-mail: </label><br/>
+<input type="text" id="Email" name="Email"/>
+<br/>
+
+<label for="password">Парола: </label><br/>
+<input type="password" id="Password" name="Password"/>
+<br/>
+
+<br/>
+<input type="submit" name="register" value="Регистрация"/>
+</form>
+</div>
+
+ 
         <div id = "footer">Валентина Динкова</div>
       </div>
     </div>

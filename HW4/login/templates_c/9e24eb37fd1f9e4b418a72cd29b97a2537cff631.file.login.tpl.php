@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 16:27:18
+<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 19:41:55
          compiled from "../templates_c/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2451466944dbc0aee62fa86-76075225%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -13,7 +13,7 @@ $_smarty_tpl->decodeProperties(array (
     '660999d210f74d28ee46d5b2195450c1dd93e26b' => 
     array (
       0 => '../templates_c/index.tpl',
-      1 => 1304173596,
+      1 => 1304185063,
       2 => 'file',
     ),
   ),
@@ -69,7 +69,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 ! </li>
           <li><a href="/xampp/fmi-php/HW4/logout/">[изход]</a></li>
 	<?php }else{ ?>
-          <li><a href="/xampp/fmi-php/HW4/login/">Вход</a></li>
+          <li id="login"><a href="/xampp/fmi-php/HW4/login/">Вход</a></li>
 	<?php }?>
         </ul>
 	<?php if ($_smarty_tpl->getVariable('flash')->value){?>

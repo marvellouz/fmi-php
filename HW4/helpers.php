@@ -1,5 +1,7 @@
 <?php
 
+require_once("settings.php");
+
 $mysqli=new mysqli($host, $user, $password, $schema);
 
 $mysqli->set_charset("utf8");
@@ -21,6 +23,13 @@ if (mysqli_connect_error()) {
   die('Connect Error (' . mysqli_connect_errno() . ') '
     . mysqli_connect_error());
 }
+
+
+function execute_query($query_string) {
+  global $mysqli;
+  return $mysqli->query($query_string);
+}
+
 
 function table_content($query_string) {
   global $mysqli;

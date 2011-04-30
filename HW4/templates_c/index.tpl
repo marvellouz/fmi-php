@@ -37,7 +37,7 @@
           <li id="hello">Здравейте, {$user_name}! </li>
           <li><a href="/xampp/fmi-php/HW4/logout/">[изход]</a></li>
 	{else}
-          <li><a href="/xampp/fmi-php/HW4/login/">Вход</a></li>
+          <li id="login"><a href="/xampp/fmi-php/HW4/login/">Вход</a></li>
 	{/if}
         </ul>
 	{if $flash}

@@ -25,8 +25,9 @@ function login() {
       header("Location: ../");
       exit;
     }
-  }
     $_SESSION['flash'] = "Грешно потребителско име или парола!";
+    header("Location: ./");
+  }
 }
 
 login();
