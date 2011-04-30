@@ -27,16 +27,15 @@ function login() {
       $_SESSION['FirstName'] = $user['FirstName'];
       $_SESSION['LastName'] = $user['LastName'];
       $_SESSION['flash'] = "Успешно влязохте като ".$_SESSION['email']."!";
-      header("Location: ../index.php");
+      header("Location: ../");
       exit;
     }
     $_SESSION['flash'] = "Грешно потребителско име или парола!";
   }
+    $_SESSION['flash'] = "Грешно потребителско име или парола!";
 }
 
 login();
-
-$smarty = new Smarty;
 
 $smarty->assign('categories', $categories);
 

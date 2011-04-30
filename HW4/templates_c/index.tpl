@@ -34,7 +34,6 @@
         </ul>
         <ul id = "hmenu2">
         </ul>
-      {block name=content}
 	{if $flash}
 	<div id="flash">
 	  {$flash}
@@ -43,6 +42,7 @@
       </div>
       <div id = "content">
 
+      {block name=content}
         <div id = "images">
 	{foreach from=$wishes item=wish}
           <div class = "image"><a href = "/xampp/fmi-php/HW4/" ><img src = "{$wish['Image']}" alt = "{$wish['ID']}"/></a>
