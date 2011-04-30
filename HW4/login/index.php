@@ -10,12 +10,7 @@ function check_login($email, $password) {
   $user_results = "select * from User where Email='$email' and Password='$password' limit 1";
   $user = table_content($user_results);
   if (count($user) == 0) return false;
-  return $user;
-}
-
-function logout() {
-  if (isset($_GET['logout']))
-    session_destroy();
+  return $user[0];
 }
 
 function login() {
@@ -26,18 +21,15 @@ function login() {
       $_SESSION['email'] = $_POST['email'];
       $_SESSION['FirstName'] = $user['FirstName'];
       $_SESSION['LastName'] = $user['LastName'];
-      $_SESSION['flash'] = "Успешно влязохте като ".$_SESSION['email']."!";
+      $_SESSION['flash'] = "Успешно влязохте като ".$_SESSION['FirstName']."!";
       header("Location: ../");
       exit;
     }
-    $_SESSION['flash'] = "Грешно потребителско име или парола!";
   }
     $_SESSION['flash'] = "Грешно потребителско име или парола!";
 }
 
 login();
-
-$smarty->assign('categories', $categories);
 
 
 // display it

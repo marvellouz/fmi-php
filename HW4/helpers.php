@@ -36,8 +36,17 @@ $categories_results = "select * from Category";
 $categories = table_content($categories_results); 
 
 $smarty = new Smarty;
+
 $smarty->assign('flash', $_SESSION['flash']);
 $_SESSION['flash']="";
+
+$is_logged_user = array_key_exists('uid', $_SESSION);
+
+if ($is_logged_user) {
+  $smarty->assign('user_name', $_SESSION['FirstName']);
+}
+
 $smarty->assign('categories', $categories);
+$smarty->assign('is_logged_user', $is_logged_user);
 
 ?>

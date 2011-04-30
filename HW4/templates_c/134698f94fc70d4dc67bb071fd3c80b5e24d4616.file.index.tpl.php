@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 11:05:51
+<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 16:26:37
          compiled from "templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6191918924dbbd0efd47d88-44205385%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9278617604dbc1c1dadaf56-45683468%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '134698f94fc70d4dc67bb071fd3c80b5e24d4616' => 
     array (
       0 => 'templates_c/index.tpl',
-      1 => 1304154296,
+      1 => 1304173596,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6191918924dbbd0efd47d88-44205385',
+  'nocache_hash' => '9278617604dbc1c1dadaf56-45683468',
   'function' => 
   array (
   ),
@@ -58,6 +58,13 @@ if ($_smarty_tpl->_count($_from) > 0){
 	<?php }} ?>
         </ul>
         <ul id = "hmenu2">
+	<?php if ($_smarty_tpl->getVariable('is_logged_user')->value){?>
+          <li id="hello">Здравейте, <?php echo $_smarty_tpl->getVariable('user_name')->value;?>
+! </li>
+          <li><a href="/xampp/fmi-php/HW4/logout/">[изход]</a></li>
+	<?php }else{ ?>
+          <li><a href="/xampp/fmi-php/HW4/login/">Вход</a></li>
+	<?php }?>
         </ul>
 	<?php if ($_smarty_tpl->getVariable('flash')->value){?>
 	<div id="flash">

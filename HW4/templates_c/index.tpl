@@ -33,6 +33,12 @@
 	{/foreach}
         </ul>
         <ul id = "hmenu2">
+	{if $is_logged_user}
+          <li id="hello">Здравейте, {$user_name}! </li>
+          <li><a href="/xampp/fmi-php/HW4/logout/">[изход]</a></li>
+	{else}
+          <li><a href="/xampp/fmi-php/HW4/login/">Вход</a></li>
+	{/if}
         </ul>
 	{if $flash}
 	<div id="flash">

@@ -33,20 +33,31 @@ body {
   margin: 0;
 }
 
-#hmenu, #hmenu2 {
+#hmenu  {
   padding-top: 105px;
 }
 
 #hmenu li, #hmenu2 li {
   display: inline;
+}
+#hmenu li {
   padding: 10px;
 }
-
-#hmenu li a , #hmenu2 li a {
+#hmenu2 {
+  padding-left: 50px;
+  padding-top: 80px;
+}
+#hmenu li a {
   color: #531F24;
   font: 18px Comic Sans MS, sans-serif;
 }
-
+#hmenu2 li a {
+  color: #531F24;
+}
+#hello {
+  font: bold 16px Georgia, sans-serif;
+  color: #531F24;
+}
 #images {
   margin: 0;
   padding: 0;
