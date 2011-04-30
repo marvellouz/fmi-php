@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 20:22:07
+<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 20:25:43
          compiled from "../templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16966952314dbc534fa13317-24500470%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:19029805184dbc54273a5780-52383999%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '660999d210f74d28ee46d5b2195450c1dd93e26b' => 
     array (
       0 => '../templates_c/index.tpl',
-      1 => 1304185063,
+      1 => 1304187829,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16966952314dbc534fa13317-24500470',
+  'nocache_hash' => '19029805184dbc54273a5780-52383999',
   'function' => 
   array (
   ),
@@ -64,6 +64,7 @@ if ($_smarty_tpl->_count($_from) > 0){
           <li><a href="/xampp/fmi-php/HW4/logout/">[изход]</a></li>
 	<?php }else{ ?>
           <li id="login"><a href="/xampp/fmi-php/HW4/login/">Вход</a></li>
+          <li id="register"><a href="/xampp/fmi-php/HW4/register/">Регистрация</a></li>
 	<?php }?>
         </ul>
 	<?php if ($_smarty_tpl->getVariable('flash')->value){?>

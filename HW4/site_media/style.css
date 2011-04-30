@@ -54,10 +54,15 @@ body {
 #hmenu2 li a {
   color: #531F24;
 }
-#hello, #login {
+#hello, #login, #register {
   font: bold 16px Georgia, sans-serif;
   color: #531F24;
 }
+
+#register {
+  padding-left: 10px;
+}
+
 #images {
   margin: 0;
   padding: 0;

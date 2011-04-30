@@ -38,6 +38,7 @@
           <li><a href="/xampp/fmi-php/HW4/logout/">[изход]</a></li>
 	{else}
           <li id="login"><a href="/xampp/fmi-php/HW4/login/">Вход</a></li>
+          <li id="register"><a href="/xampp/fmi-php/HW4/register/">Регистрация</a></li>
 	{/if}
         </ul>
 	{if $flash}
