@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 19:39:53
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-02 17:15:18
          compiled from "../templates_c/register.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4842586034dbc3d05be1730-44633151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:6912453374dbce6781548c8-97475946%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ba2fef0b889e5706e92fdffdd91c8ddc4ecfc559' => 
     array (
       0 => '../templates_c/register.tpl',
-      1 => 1304181809,
+      1 => 1304187878,
       2 => 'file',
     ),
     '660999d210f74d28ee46d5b2195450c1dd93e26b' => 
     array (
       0 => '../templates_c/index.tpl',
-      1 => 1304185063,
+      1 => 1304349315,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4842586034dbc3d05be1730-44633151',
+  'nocache_hash' => '6912453374dbce6781548c8-97475946',
   'function' => 
   array (
   ),
@@ -52,7 +52,8 @@ $_smarty_tpl->decodeProperties(array (
     <div id = "main">
       <div id = "header">
         <ul id = "hmenu">
-        <li><a href = "/xampp/fmi-php/HW4/">All</a></li>
+        <li><a href = "/xampp/fmi-php/HW4/">Начало</a></li>
+	<?php if ($_smarty_tpl->getVariable('is_logged_user')->value){?>
 	<?php  $_smarty_tpl->tpl_vars['category'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('categories')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
@@ -62,6 +63,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 "><?php echo $_smarty_tpl->tpl_vars['category']->value["Name"];?>
 </a></li>
 	<?php }} ?>
+	<?php }?>
         </ul>
         <ul id = "hmenu2">
 	<?php if ($_smarty_tpl->getVariable('is_logged_user')->value){?>
@@ -70,6 +72,7 @@ if ($_smarty_tpl->_count($_from) > 0){
           <li><a href="/xampp/fmi-php/HW4/logout/">[изход]</a></li>
 	<?php }else{ ?>
           <li id="login"><a href="/xampp/fmi-php/HW4/login/">Вход</a></li>
+          <li id="register"><a href="/xampp/fmi-php/HW4/register/">Регистрация</a></li>
 	<?php }?>
         </ul>
 	<?php if ($_smarty_tpl->getVariable('flash')->value){?>

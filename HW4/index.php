@@ -4,11 +4,11 @@ require_once("./libs/Smarty.class.php");
 require_once("./settings.php"); 
 require_once("./helpers.php"); 
 
-$wishes_results = "select * from Wish order by Priority";
-$wishes = table_content($wishes_results);
-
-$smarty->assign('wishes', $wishes);
-
+if($is_logged_user) {
+  $wishes_results = "select * from Wish where User_ID=" . $_SESSION['uid'] . " order by Priority";
+  $wishes = table_content($wishes_results);
+  $smarty->assign('wishes', $wishes);
+}
 // display it
 $smarty->display('templates_c/index.tpl');
 

@@ -19,7 +19,7 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`User` (
   `Password` VARCHAR(255) NOT NULL ,
   `IsAdmin` TINYINT(1)  NULL ,
   PRIMARY KEY (`ID`) ,
-  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC) )
+  UNIQUE INDEX `E-mail_UNIQUE` (`Email` ASC) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
@@ -59,7 +59,14 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`Category` (
   `Name` VARCHAR(45) NOT NULL ,
   `Description` VARCHAR(255) NULL ,
   `Image` VARCHAR(255) NULL ,
-  PRIMARY KEY (`ID`) )
+  `User_ID` INT NULL ,
+  PRIMARY KEY (`ID`, `User_ID`) ,
+  INDEX `fk_Category_User1` (`User_ID` ASC) ,
+  CONSTRAINT `fk_Category_User1`
+    FOREIGN KEY (`User_ID` )
+    REFERENCES `mydb`.`User` (`ID` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;

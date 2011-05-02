@@ -27,10 +27,12 @@
     <div id = "main">
       <div id = "header">
         <ul id = "hmenu">
-        <li><a href = "/xampp/fmi-php/HW4/">All</a></li>
+        <li><a href = "/xampp/fmi-php/HW4/">Начало</a></li>
+	{if $is_logged_user}
 	{foreach from=$categories item=category}
           <li><a href = "/xampp/fmi-php/HW4/categories/?id={$category['ID']}">{$category["Name"]}</a></li>
 	{/foreach}
+	{/if}
         </ul>
         <ul id = "hmenu2">
 	{if $is_logged_user}
@@ -51,13 +53,19 @@
 
       {block name=content}
         <div id = "images">
+	{if $is_logged_user}
 	{foreach from=$wishes item=wish}
           <div class = "image"><a href = "/xampp/fmi-php/HW4/" ><img src = "{$wish['Image']}" alt = "{$wish['ID']}"/></a>
             <div class = "description"><h1>{$wish["Name"]}</h1><p>{$wish["Description"]} </p> 
             </div>
           </div>
 	{/foreach}
-
+	{if !$categories}
+	<div class="container"></div>
+	{/if}
+	{else}
+	<div class="container"></div>
+	{/if}
         </div>
         {/block} 
         <div id = "footer">Валентина Динкова</div>

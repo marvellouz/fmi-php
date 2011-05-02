@@ -2,6 +2,8 @@
 
 require_once("settings.php");
 
+$smarty = new Smarty;
+
 $mysqli=new mysqli($host, $user, $password, $schema);
 
 $mysqli->set_charset("utf8");
@@ -41,21 +43,24 @@ function table_content($query_string) {
   return $result;
 }
 
-$categories_results = "select * from Category"; 
-$categories = table_content($categories_results); 
-
-$smarty = new Smarty;
-
-$smarty->assign('flash', $_SESSION['flash']);
-$_SESSION['flash']="";
-
 $is_logged_user = array_key_exists('uid', $_SESSION);
-
 if ($is_logged_user) {
   $smarty->assign('user_name', $_SESSION['FirstName']);
 }
 
-$smarty->assign('categories', $categories);
+if($is_logged_user) {
+  $uid = $_SESSION['uid'];
+  $categories_results = "select * from Category where User_ID = $uid"; 
+  $categories = table_content($categories_results); 
+  $smarty->assign('categories', $categories);
+}
+
+if(array_key_exists('flash', $_SESSION)) {
+  $smarty->assign('flash', $_SESSION['flash']);
+  $_SESSION['flash']="";
+}
+
+
 $smarty->assign('is_logged_user', $is_logged_user);
 
 ?>

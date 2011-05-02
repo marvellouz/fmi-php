@@ -1,1 +1,2 @@
-INSERT INTO `mydb`.`Category` (`Name`, `Description`, `Image`) VALUES ('MTB', NULL, NULL);
+INSERT INTO `mydb`.`Category` (`Name`, `Description`, `Image`, `User_ID`) VALUES ('MTB', NULL, NULL, 1);
+INSERT INTO `mydb`.`Category` (`Name`, `Description`, `Image`, `User_ID`) VALUES ('Photography', NULL, NULL, 1);

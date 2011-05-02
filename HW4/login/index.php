@@ -17,7 +17,7 @@ function login() {
   if(isset ($_POST['login'])) {
     $user = check_login(mysql_real_escape_string($_POST['email']), mysql_real_escape_string($_POST['password']));
     if($user) {
-      $_SESSION['uid'] = $user['id'];
+      $_SESSION['uid'] = $user['ID'];
       $_SESSION['email'] = $_POST['email'];
       $_SESSION['FirstName'] = $user['FirstName'];
       $_SESSION['LastName'] = $user['LastName'];

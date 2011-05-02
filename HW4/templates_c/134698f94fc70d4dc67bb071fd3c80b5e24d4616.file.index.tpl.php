@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-30 20:23:49
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-02 17:15:34
          compiled from "templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2083932694dbc53b5bbd8f5-54982651%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:15747487624dbeca96db3812-43046837%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '134698f94fc70d4dc67bb071fd3c80b5e24d4616' => 
     array (
       0 => 'templates_c/index.tpl',
-      1 => 1304187829,
+      1 => 1304349315,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2083932694dbc53b5bbd8f5-54982651',
+  'nocache_hash' => '15747487624dbeca96db3812-43046837',
   'function' => 
   array (
   ),
@@ -46,7 +46,8 @@ $_smarty_tpl->decodeProperties(array (
     <div id = "main">
       <div id = "header">
         <ul id = "hmenu">
-        <li><a href = "/xampp/fmi-php/HW4/">All</a></li>
+        <li><a href = "/xampp/fmi-php/HW4/">Начало</a></li>
+	<?php if ($_smarty_tpl->getVariable('is_logged_user')->value){?>
 	<?php  $_smarty_tpl->tpl_vars['category'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('categories')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
@@ -56,6 +57,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 "><?php echo $_smarty_tpl->tpl_vars['category']->value["Name"];?>
 </a></li>
 	<?php }} ?>
+	<?php }?>
         </ul>
         <ul id = "hmenu2">
 	<?php if ($_smarty_tpl->getVariable('is_logged_user')->value){?>
@@ -78,6 +80,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 
       
         <div id = "images">
+	<?php if ($_smarty_tpl->getVariable('is_logged_user')->value){?>
 	<?php  $_smarty_tpl->tpl_vars['wish'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('wishes')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
@@ -92,7 +95,12 @@ if ($_smarty_tpl->_count($_from) > 0){
             </div>
           </div>
 	<?php }} ?>
-
+	<?php if (!$_smarty_tpl->getVariable('categories')->value){?>
+	<div class="container"></div>
+	<?php }?>
+	<?php }else{ ?>
+	<div class="container"></div>
+	<?php }?>
         </div>
          
         <div id = "footer">Валентина Динкова</div>

@@ -17,11 +17,6 @@ function logout() {
 
 logout();
 
-$wishes_results = "select * from Wish order by Priority";
-$wishes = table_content($wishes_results);
-
-$smarty->assign('wishes', $wishes);
-
 // display it
 $smarty->display('../templates_c/index.tpl');
 
