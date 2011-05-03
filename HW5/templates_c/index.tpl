@@ -28,11 +28,7 @@
       <div id = "header">
         <ul id = "hmenu">
         <li><a href = "/xampp/fmi-php/HW5/">Начало</a></li>
-	{if $is_logged_user}
-	{foreach from=$categories item=category}
-          <li><a href = "/xampp/fmi-php/HW5/categories/?id={$category['ID']}">{$category["Name"]}</a></li>
-	{/foreach}
-	{/if}
+        <li><a href = "/xampp/fmi-php/HW5/search/">Търсене</a></li>
         </ul>
         <ul id = "hmenu2">
 	{if $is_logged_user}
@@ -55,8 +51,8 @@
         <div id = "images">
 	{if $is_logged_user}
 	{foreach from=$wishes item=wish}
-          <div class = "image"><a href = "/xampp/fmi-php/HW5/" ><img src = "{$wish['Image']}" alt = "{$wish['ID']}"/></a>
-            <div class = "description"><h1>{$wish["Name"]}</h1><p>{$wish["Description"]} </p> 
+          <div class = "image"><a href = "/xampp/fmi-php/HW5/" ><img src = "{$wish['Image']}" alt = "{$wish['Name']}"/></a>
+            <div class = "description"><h1>{$wish["Name"]}</h1>
             </div>
           </div>
 	{/foreach}

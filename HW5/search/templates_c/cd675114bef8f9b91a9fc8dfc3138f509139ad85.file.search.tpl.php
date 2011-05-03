@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-03 21:57:03
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-03 22:27:11
          compiled from "../templates_c/search.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5433754004dc05e0f2c7303-30493000%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -13,7 +13,7 @@ $_smarty_tpl->decodeProperties(array (
     '660999d210f74d28ee46d5b2195450c1dd93e26b' => 
     array (
       0 => '../templates_c/index.tpl',
-      1 => 1304416311,
+      1 => 1304454426,
       2 => 'file',
     ),
   ),
@@ -53,17 +53,7 @@ $_smarty_tpl->decodeProperties(array (
       <div id = "header">
         <ul id = "hmenu">
         <li><a href = "/xampp/fmi-php/HW5/">Начало</a></li>
-	<?php if ($_smarty_tpl->getVariable('is_logged_user')->value){?>
-	<?php  $_smarty_tpl->tpl_vars['category'] = new Smarty_Variable;
- $_from = $_smarty_tpl->getVariable('categories')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-if ($_smarty_tpl->_count($_from) > 0){
-    foreach ($_from as $_smarty_tpl->tpl_vars['category']->key => $_smarty_tpl->tpl_vars['category']->value){
-?>
-          <li><a href = "/xampp/fmi-php/HW5/categories/?id=<?php echo $_smarty_tpl->tpl_vars['category']->value['ID'];?>
-"><?php echo $_smarty_tpl->tpl_vars['category']->value["Name"];?>
-</a></li>
-	<?php }} ?>
-	<?php }?>
+        <li><a href = "/xampp/fmi-php/HW5/search/">Търсене</a></li>
         </ul>
         <ul id = "hmenu2">
 	<?php if ($_smarty_tpl->getVariable('is_logged_user')->value){?>

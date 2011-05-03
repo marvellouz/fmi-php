@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-03 15:18:23
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-03 23:00:51
          compiled from "templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18388392834dbfc99111b453-44417325%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:4829173724dc06d03ec0b40-33784992%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '134698f94fc70d4dc67bb071fd3c80b5e24d4616' => 
     array (
       0 => 'templates_c/index.tpl',
-      1 => 1304416311,
+      1 => 1304456451,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18388392834dbfc99111b453-44417325',
+  'nocache_hash' => '4829173724dc06d03ec0b40-33784992',
   'function' => 
   array (
   ),
@@ -47,17 +47,7 @@ $_smarty_tpl->decodeProperties(array (
       <div id = "header">
         <ul id = "hmenu">
         <li><a href = "/xampp/fmi-php/HW5/">Начало</a></li>
-	<?php if ($_smarty_tpl->getVariable('is_logged_user')->value){?>
-	<?php  $_smarty_tpl->tpl_vars['category'] = new Smarty_Variable;
- $_from = $_smarty_tpl->getVariable('categories')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-if ($_smarty_tpl->_count($_from) > 0){
-    foreach ($_from as $_smarty_tpl->tpl_vars['category']->key => $_smarty_tpl->tpl_vars['category']->value){
-?>
-          <li><a href = "/xampp/fmi-php/HW5/categories/?id=<?php echo $_smarty_tpl->tpl_vars['category']->value['ID'];?>
-"><?php echo $_smarty_tpl->tpl_vars['category']->value["Name"];?>
-</a></li>
-	<?php }} ?>
-	<?php }?>
+        <li><a href = "/xampp/fmi-php/HW5/search/">Търсене</a></li>
         </ul>
         <ul id = "hmenu2">
 	<?php if ($_smarty_tpl->getVariable('is_logged_user')->value){?>
@@ -87,11 +77,10 @@ if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['wish']->key => $_smarty_tpl->tpl_vars['wish']->value){
 ?>
           <div class = "image"><a href = "/xampp/fmi-php/HW5/" ><img src = "<?php echo $_smarty_tpl->tpl_vars['wish']->value['Image'];?>
-" alt = "<?php echo $_smarty_tpl->tpl_vars['wish']->value['ID'];?>
+" alt = "<?php echo $_smarty_tpl->tpl_vars['wish']->value['Name'];?>
 "/></a>
             <div class = "description"><h1><?php echo $_smarty_tpl->tpl_vars['wish']->value["Name"];?>
-</h1><p><?php echo $_smarty_tpl->tpl_vars['wish']->value["Description"];?>
- </p> 
+</h1>
             </div>
           </div>
 	<?php }} ?>

@@ -61,26 +61,6 @@ if(array_key_exists('flash', $_SESSION)) {
   $_SESSION['flash']="";
 }
 
-$doc = new DOMDocument;
-
-// We don't want to bother with white spaces
-$doc->preserveWhiteSpace = false;
-
-$doc->Load('/opt/lampp/htdocs/xampp/fmi-php/HW5/db/mydb.xml');
-
-$xpath = new DOMXPath($doc);
-
-// We starts from the root element
-
-$query = '/mysqldump/database/table_data[@name="Category"]/row/field[@name="User_ID"][. = 1]/parent::*';
-
-$entries = $xpath->query($query);
-
-print_r( $entries);
-foreach ($entries as $element) {
-      echo $element->nodeValue;
-}
-
 $smarty->assign('is_logged_user', $is_logged_user);
 $smarty->assign('isset_flash', $isset_flash);
 
