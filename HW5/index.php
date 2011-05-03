@@ -17,8 +17,9 @@ if($is_logged_user) {
 
   // We starts from the root element
 
-  $query = '/mysqldump/database/table_data[@name="Wish"]/row/field[@name="User_ID"][. = 1]/parent::*/field';
+  $query = '/mysqldump/database/table_data[@name="Wish"]/row/field[@name="User_ID"][. ='. $_SESSION['uid'] .']/parent::*/field';
 
+  $wishes = array();
   $entries = $xpath->query($query);
   $results = array();
   $images = array();
@@ -35,9 +36,10 @@ if($is_logged_user) {
   for ($i=0; $i<count($results); $i++) {
       $wishes[$i] = array("Name" => $results[$i], "Image" => $images[$i]);
   }
-  $smarty->assign('wishes', $wishes);
 
 }
+else $wishes = array();
+$smarty->assign('wishes', $wishes);
 // display it
 $smarty->display('templates_c/index.tpl');
 
