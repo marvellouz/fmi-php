@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-02 17:08:13
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-02 19:35:50
          compiled from "../templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9922281544dbec8ddb76d84-94821178%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:107477684dbeeb76cd5598-59347962%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '660999d210f74d28ee46d5b2195450c1dd93e26b' => 
     array (
       0 => '../templates_c/index.tpl',
-      1 => 1304348823,
+      1 => 1304349315,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9922281544dbec8ddb76d84-94821178',
+  'nocache_hash' => '107477684dbeeb76cd5598-59347962',
   'function' => 
   array (
   ),
@@ -95,9 +95,12 @@ if ($_smarty_tpl->_count($_from) > 0){
             </div>
           </div>
 	<?php }} ?>
+	<?php if (!$_smarty_tpl->getVariable('categories')->value){?>
+	<div class="container"></div>
 	<?php }?>
-	<div class="container">
-	</div>
+	<?php }else{ ?>
+	<div class="container"></div>
+	<?php }?>
         </div>
          
         <div id = "footer">Валентина Динкова</div>

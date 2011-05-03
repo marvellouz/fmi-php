@@ -29,7 +29,10 @@ CREATE TABLE `Category` (
   `Name` varchar(45) NOT NULL,
   `Description` varchar(255) DEFAULT NULL,
   `Image` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
+  `User_ID` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`ID`,`User_ID`),
+  KEY `fk_Category_User1` (`User_ID`),
+  CONSTRAINT `fk_Category_User1` FOREIGN KEY (`User_ID`) REFERENCES `User` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -39,7 +42,7 @@ CREATE TABLE `Category` (
 
 LOCK TABLES `Category` WRITE;
 /*!40000 ALTER TABLE `Category` DISABLE KEYS */;
-INSERT INTO `Category` VALUES (1,'MTB',NULL,NULL),(2,'Photography',NULL,NULL);
+INSERT INTO `Category` VALUES (1,'MTB',NULL,NULL,1),(2,'Photography',NULL,NULL,1);
 /*!40000 ALTER TABLE `Category` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-04-27 13:17:29
+-- Dump completed on 2011-05-03 11:54:42

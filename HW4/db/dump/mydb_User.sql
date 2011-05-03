@@ -18,33 +18,32 @@ USE `mydb`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Wish`
+-- Table structure for table `User`
 --
 
-DROP TABLE IF EXISTS `Wish`;
+DROP TABLE IF EXISTS `User`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Wish` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '	',
-  `Name` varchar(45) NOT NULL,
-  `Description` varchar(255) DEFAULT NULL,
-  `Priority` int(11) NOT NULL,
-  `Image` varchar(255) DEFAULT NULL,
-  `User_ID` int(11) DEFAULT NULL,
+CREATE TABLE `User` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `FirstName` varchar(45) NOT NULL,
+  `LastName` varchar(45) NOT NULL,
+  `Email` varchar(45) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `IsAdmin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`ID`),
-  KEY `fk_Wish_User1` (`User_ID`),
-  CONSTRAINT `fk_Wish_User1` FOREIGN KEY (`User_ID`) REFERENCES `User` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  UNIQUE KEY `E-mail_UNIQUE` (`Email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Wish`
+-- Dumping data for table `User`
 --
 
-LOCK TABLES `Wish` WRITE;
-/*!40000 ALTER TABLE `Wish` DISABLE KEYS */;
-INSERT INTO `Wish` VALUES (1,'Ram HT1',NULL,1,'/xampp/fmi-php/HW4/site_media/images/wishlist/ramHT1_small.png',1),(2,'Canon EOS 500 D',NULL,2,'/xampp/fmi-php/HW4/site_media/images/wishlist/eos_small.png',1);
-/*!40000 ALTER TABLE `Wish` ENABLE KEYS */;
+LOCK TABLES `User` WRITE;
+/*!40000 ALTER TABLE `User` DISABLE KEYS */;
+INSERT INTO `User` VALUES (1,'Някой','Някойси','someone@somewhere.com','asdasd',1),(2,'asd','asd','asd@asd.asd','asdasd',0);
+/*!40000 ALTER TABLE `User` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
