@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-02 17:15:34
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-03 11:23:29
          compiled from "templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15747487624dbeca96db3812-43046837%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:18388392834dbfc99111b453-44417325%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '134698f94fc70d4dc67bb071fd3c80b5e24d4616' => 
     array (
       0 => 'templates_c/index.tpl',
-      1 => 1304349315,
+      1 => 1304414577,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '15747487624dbeca96db3812-43046837',
+  'nocache_hash' => '18388392834dbfc99111b453-44417325',
   'function' => 
   array (
   ),
@@ -69,7 +69,7 @@ if ($_smarty_tpl->_count($_from) > 0){
           <li id="register"><a href="/xampp/fmi-php/HW4/register/">Регистрация</a></li>
 	<?php }?>
         </ul>
-	<?php if ($_smarty_tpl->getVariable('flash')->value){?>
+	<?php if ($_smarty_tpl->getVariable('isset_flash')->value){?>
 	<div id="flash">
 	  <?php echo $_smarty_tpl->getVariable('flash')->value;?>
 

@@ -43,6 +43,7 @@ function table_content($query_string) {
   return $result;
 }
 
+$isset_flash = array_key_exists('flash', $_SESSION);
 $is_logged_user = array_key_exists('uid', $_SESSION);
 if ($is_logged_user) {
   $smarty->assign('user_name', $_SESSION['FirstName']);
@@ -62,5 +63,6 @@ if(array_key_exists('flash', $_SESSION)) {
 
 
 $smarty->assign('is_logged_user', $is_logged_user);
+$smarty->assign('isset_flash', $isset_flash);
 
 ?>

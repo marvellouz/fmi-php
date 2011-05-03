@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("images/background.jpg");
+  background-repeat: repeat;
+  min-width: 900px;
+}
+
+#header {
+  margin-top: 30px;
+  background-image: url("images/header.png");
+  background-repeat: no-repeat;
+  width: 771px;
+  height: 279px;
+}
+
+#content {
+  color: #531F24;
+  font: italic 16px Georgia, sans-serif;
+  min-height: 800px;
+  padding: 0;
+}
+/* IE-6 fixes */
+* html body{ width: 1500px; }
+
+#main {
+  margin-left: 30%;
+}
+
+#menu {
+  padding: 0;
+  float: left;
+  margin: 0;
+}
+
+#hmenu  {
+  padding-top: 105px;
+}
+
+#hmenu li, #hmenu2 li {
+  display: inline;
+}
+#hmenu li {
+  padding: 10px;
+}
+#hmenu2 {
+  padding-left: 50px;
+  padding-top: 80px;
+}
+#hmenu li a {
+  color: #531F24;
+  font: 18px Comic Sans MS, sans-serif;
+}
+#hmenu2 li a {
+  color: #531F24;
+}
+#hello, #login, #register {
+  font: bold 16px Georgia, sans-serif;
+  color: #531F24;
+}
+
+#register {
+  padding-left: 10px;
+}
+
+#images {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a img {
+  border: none;
+  float: left;
+  position: relative;
+  left: 75px;
+}
+
+img {
+  border: none;
+}
+
+.image {
+  background-image: url("images/item.png");
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 788px;
+  padding-top: 47px;
+}
+
+.description {
+  padding-left: 450px;
+  padding-right: 80px;
+}
+
+#menu_cup {
+  margin-left: 3em;
+  margin-top: 3em;
+}
+
+#mouse {
+  background-image: url("images/nose.png");
+  height: 300px;
+  width: 50px;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin: 0px;
+}
+
+#mouse:hover {
+  background-image: url("images/mouse.png");
+  height: 300px;
+  width: 200px;
+}
+
+.container {
+  background-image: url("images/content.png");
+  background-repeat: repeat-y;
+  min-height: 300px;
+}
+
+/* IE-6 fixes */
+* html .container{ height: 300px; }
+
+.container form {
+  margin-left: 230px;
+  padding-top: 50px;
+}
+
+#contacts, #about {
+  margin: 0;
+  padding-left: 120px;
+  padding-right: 190px;
+  padding-top: 80px;
+}
+
+#footer {
+  background-image: url("images/footer.png");
+  background-repeat: repeat-y;
+  padding-top: 50px;
+  padding-left: 300px;
+  height: 100px;
+  color: #F6C285;
+  font: 16px Georgia, sans-serif;
+}
+
+#flash {
+  margin-left: 50px;
+  color: #531F24;
+  font: italic 16px Georgia, sans-serif;
+}
+
+#search_result {
+  padding-left: 160px;
+}

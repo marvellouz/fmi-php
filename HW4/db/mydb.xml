@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="mydb">
+	<table_structure name="Category">
+		<field Field="ID" Type="int(11)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="Name" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="Description" Type="varchar(255)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="Image" Type="varchar(255)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="User_ID" Type="int(11)" Null="NO" Key="PRI" Default="0" Extra="" Comment="" />
+		<key Table="Category" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="ID" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="Category" Non_unique="0" Key_name="PRIMARY" Seq_in_index="2" Column_name="User_ID" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="Category" Non_unique="1" Key_name="fk_Category_User1" Seq_in_index="1" Column_name="User_ID" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="Category" Engine="InnoDB" Version="10" Row_format="Compact" Rows="2" Avg_row_length="8192" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="7340032" Auto_increment="3" Create_time="2011-05-02 13:06:04" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="Category">
+	<row>
+		<field name="ID">1</field>
+		<field name="Name">MTB</field>
+		<field name="Description" xsi:nil="true" />
+		<field name="Image" xsi:nil="true" />
+		<field name="User_ID">1</field>
+	</row>
+	<row>
+		<field name="ID">2</field>
+		<field name="Name">Photography</field>
+		<field name="Description" xsi:nil="true" />
+		<field name="Image" xsi:nil="true" />
+		<field name="User_ID">1</field>
+	</row>
+	</table_data>
+	<table_structure name="User">
+		<field Field="ID" Type="int(11)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="FirstName" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="LastName" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="Email" Type="varchar(45)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="Password" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="IsAdmin" Type="tinyint(1)" Null="YES" Key="" Extra="" Comment="" />
+		<key Table="User" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="ID" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="User" Non_unique="0" Key_name="E-mail_UNIQUE" Seq_in_index="1" Column_name="Email" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="User" Engine="InnoDB" Version="10" Row_format="Compact" Rows="2" Avg_row_length="8192" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="7340032" Auto_increment="3" Create_time="2011-05-02 13:06:04" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="User">
+	<row>
+		<field name="ID">1</field>
+		<field name="FirstName">Някой</field>
+		<field name="LastName">Някойси</field>
+		<field name="Email">someone@somewhere.com</field>
+		<field name="Password">asdasd</field>
+		<field name="IsAdmin">1</field>
+	</row>
+	<row>
+		<field name="ID">2</field>
+		<field name="FirstName">asd</field>
+		<field name="LastName">asd</field>
+		<field name="Email">asd@asd.asd</field>
+		<field name="Password">asdasd</field>
+		<field name="IsAdmin">0</field>
+	</row>
+	</table_data>
+	<table_structure name="Wish">
+		<field Field="ID" Type="int(11)" Null="NO" Key="PRI" Extra="auto_increment" Comment="	" />
+		<field Field="Name" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="Description" Type="varchar(255)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="Priority" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="Image" Type="varchar(255)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="User_ID" Type="int(11)" Null="YES" Key="MUL" Extra="" Comment="" />
+		<key Table="Wish" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="ID" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="Wish" Non_unique="1" Key_name="fk_Wish_User1" Seq_in_index="1" Column_name="User_ID" Collation="A" Cardinality="2" Null="YES" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="Wish" Engine="InnoDB" Version="10" Row_format="Compact" Rows="2" Avg_row_length="8192" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="7340032" Auto_increment="3" Create_time="2011-05-02 13:06:04" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="Wish">
+	<row>
+		<field name="ID">1</field>
+		<field name="Name">Ram HT1</field>
+		<field name="Description" xsi:nil="true" />
+		<field name="Priority">1</field>
+		<field name="Image">/xampp/fmi-php/HW4/site_media/images/wishlist/ramHT1_small.png</field>
+		<field name="User_ID">1</field>
+	</row>
+	<row>
+		<field name="ID">2</field>
+		<field name="Name">Canon EOS 500 D</field>
+		<field name="Description" xsi:nil="true" />
+		<field name="Priority">2</field>
+		<field name="Image">/xampp/fmi-php/HW4/site_media/images/wishlist/eos_small.png</field>
+		<field name="User_ID">1</field>
+	</row>
+	</table_data>
+	<table_structure name="Wish_has_Category">
+		<field Field="Wish_ID" Type="int(11)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="Category_ID" Type="int(11)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<key Table="Wish_has_Category" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="Wish_ID" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="Wish_has_Category" Non_unique="0" Key_name="PRIMARY" Seq_in_index="2" Column_name="Category_ID" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="Wish_has_Category" Non_unique="1" Key_name="fk_Wish_has_Category_Category1" Seq_in_index="1" Column_name="Category_ID" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="Wish_has_Category" Non_unique="1" Key_name="fk_Wish_has_Category_Wish" Seq_in_index="1" Column_name="Wish_ID" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="Wish_has_Category" Engine="InnoDB" Version="10" Row_format="Compact" Rows="2" Avg_row_length="8192" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="7340032" Create_time="2011-05-02 13:06:04" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="Wish_has_Category">
+	<row>
+		<field name="Wish_ID">1</field>
+		<field name="Category_ID">1</field>
+	</row>
+	<row>
+		<field name="Wish_ID">2</field>
+		<field name="Category_ID">2</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

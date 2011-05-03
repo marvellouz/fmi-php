@@ -43,7 +43,7 @@
           <li id="register"><a href="/xampp/fmi-php/HW4/register/">Регистрация</a></li>
 	{/if}
         </ul>
-	{if $flash}
+	{if $isset_flash}
 	<div id="flash">
 	  {$flash}
 	</div>
