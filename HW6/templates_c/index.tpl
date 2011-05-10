@@ -12,6 +12,11 @@
     {/foreach} 
   </head>
   <body>
-    Hello!
+  <p>
+    {$message}
+  </p>
+  <p>
+    {$message2}
+  </p>
   </body>
 </html>

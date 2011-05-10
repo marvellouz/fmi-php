@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-08 20:57:47
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-10 19:50:00
          compiled from "templates_c/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:992974164dc6e7ab50c4e8-10177187%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7955214334dc97ac895f537-68639443%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '134698f94fc70d4dc67bb071fd3c80b5e24d4616' => 
     array (
       0 => 'templates_c/index.tpl',
-      1 => 1304881066,
+      1 => 1305049799,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '992974164dc6e7ab50c4e8-10177187',
+  'nocache_hash' => '7955214334dc97ac895f537-68639443',
   'function' => 
   array (
   ),
@@ -44,6 +44,13 @@ if ($_smarty_tpl->_count($_from) > 0){
     <?php }} ?> 
   </head>
   <body>
-    Hello!
+  <p>
+    <?php echo $_smarty_tpl->getVariable('message')->value;?>
+
+  </p>
+  <p>
+    <?php echo $_smarty_tpl->getVariable('message2')->value;?>
+
+  </p>
   </body>
 </html>
