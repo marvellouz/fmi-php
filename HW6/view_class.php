@@ -2,8 +2,6 @@
 require_once("view_interface.php");
 require_once("./libs/Smarty.class.php");
 
-$smarty = new Smarty();
-
 class View implements IView {
   private $smarty;
   private $title;
