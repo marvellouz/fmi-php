@@ -10,7 +10,7 @@ $v->addJavascriptFiles(array("jquery.js", "custom.js"));
 $v->addCSSFiles(array("jquery.css", "custom.css"));
 
 $v->assignTemplateVariable("message", "Hello!");
-$v->assignTemplateVariable("message2", "Helloooooooooo!");
+$v->assignTemplateVariable("message2", "Is There Anybody Out There?");
 
 $v->display("templates_c/index.tpl");
 
