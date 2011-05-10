@@ -11,6 +11,7 @@ class View implements IView {
   private $js;
   private $cssFolder;
   private $css;
+  private $varNameValue;
 
   function __construct() {
     $this->smarty = new Smarty();
@@ -23,11 +24,15 @@ class View implements IView {
     $this->smarty->assign('cssFolder', $this->cssFolder);
     $this->smarty->assign('css', $this->css);
 
+    foreach($this->varNameValue as $varName => $varValue) {
+      $this->smarty->assign($varName, $varValue);
+    }
+
     $this->smarty->display($pageName);
   }
 
   public function assignTemplateVariable($varName, $varValue) {
-    //=============================================
+    $this->varNameValue[$varName] = $varValue;
   }
 
   public function setPageTitle($title) {
